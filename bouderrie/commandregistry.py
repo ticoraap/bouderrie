@@ -35,3 +35,6 @@ class CommandRegistry:
             return self.commands[command]
         else:
             return None
+
+    def get_all(self):
+        return self.commands
