@@ -1,0 +1,9 @@
+{
+    "name": "Bouderrie discord bot",
+    "description": "A discord bot used by the elite",
+    "image": "heroku/python",
+    "repository": "https://github.com/verbindingsfout/bouderrie",
+    "keywords": [
+        "python"
+    ]
+}
