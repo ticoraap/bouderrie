@@ -47,7 +47,7 @@ class Boudrerrie(discord.Client):
                     discord.FFmpegPCMAudio(popped_audio))
             self.playing_audio = False
 
-    async def on_message(self, message):
+    async def on_message(self, message: discord.Message):
         if message.author == self.user:
             return
 
