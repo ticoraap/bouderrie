@@ -6,23 +6,19 @@ import json
 
 
 class HelperMethods:
-
-    def get_token(self):
+    def get_token():
         try:
             return os.environ['discord_token']
         except KeyError:
-            return self.get_file_token()
-
-    def get_file_token(self):
-        try:
-            with open('.token', 'r') as f:
-                return f.readline().strip()
-        except FileNotFoundError:
-            with open('.token', 'w') as f:
-                f.write(' ')
-                return ' '
-        except Exception as e:
-            print(e)
+            try:
+                with open('.token', 'r') as f:
+                    return f.readline().strip()
+            except FileNotFoundError:
+                with open('.token', 'w') as f:
+                    f.write(' ')
+                    return ' '
+            except Exception as e:
+                print(e)
 
     def text_to_soundfile(self, text, lang='nl'):
         folder = './gtts-sounds/'
