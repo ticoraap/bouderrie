@@ -13,10 +13,6 @@ class HelperMethods:
             try:
                 with open('.token', 'r') as f:
                     return f.readline().strip()
-            except FileNotFoundError:
-                with open('.token', 'w') as f:
-                    f.write(' ')
-                    return ' '
             except Exception as e:
                 print(e)
 
