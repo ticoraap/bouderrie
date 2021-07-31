@@ -6,7 +6,14 @@ import json
 
 
 class HelperMethods:
-    def get_token():
+
+    def get_token(self):
+        try:
+            return os.environ['discord_token']
+        except KeyError:
+            return self.get_file_token()
+
+    def get_file_token():
         try:
             with open('.token', 'r') as f:
                 return f.readline().strip()
