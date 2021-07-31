@@ -13,7 +13,7 @@ class HelperMethods:
         except KeyError:
             return self.get_file_token()
 
-    def get_file_token():
+    def get_file_token(self):
         try:
             with open('.token', 'r') as f:
                 return f.readline().strip()
