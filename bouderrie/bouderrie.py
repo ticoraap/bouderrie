@@ -75,7 +75,7 @@ class Boudrerrie(discord.Client):
                 await message.attachments[0].save(fp="command-sounds/{}".format(completefilename))
                 self.CommandRegistry.add(
                     command, completefilename)
-                await message.author.send("!" + command + "command added")
+                await message.author.send("!" + command + " command added")
             return
 
         if message.content.lower().startswith('!zeg mop'):
