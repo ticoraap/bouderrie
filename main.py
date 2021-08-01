@@ -3,4 +3,11 @@ from bouderrie.bouderrie import Boudrerrie
 
 
 boudrerrie = Boudrerrie()
-boudrerrie.run(HelperMethods.get_token())
+
+discord_token = HelperMethods.get_token()
+
+if discord_token:
+    boudrerrie.run(discord_token)
+else:
+    print("No discord token found, exiting.")
+
